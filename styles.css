@@ -21,3 +21,22 @@ body {
 img {
     display: block;
 }
+
+
+/* Set 2 styles and a single breakpoint: 768px. Above for desktop, below mobile styles apply. */
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+    body {                                  /* FOR DEV */
+        background-color: aqua;             /* PURPOSES ONLY*/
+    }                                       /* REMOVE FOR PROD*/
+
+}
+
+
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 768px)  {
+    body {                                  /* FOR DEV */
+        background-color: rebeccapurple;    /* PURPOSES ONLY*/
+    }                                       /* REMOVE FOR PROD*/
+
+}
