@@ -10,7 +10,6 @@ body {
     font-family: "Open Sans", Arial, sans-serif;
     background-color: #fafafa;
     color: #262626;
-    padding: 0 3rem 3rem;
     margin: 0 auto;
 }
 
@@ -20,11 +19,6 @@ img {
 
 
 /* -- PROFILE HEADER -- */
-.profile {
-    display: grid;
-    column-gap: 10px;
-    margin: 35px 0;
-}
 
 .profile button {
     cursor: pointer;
@@ -54,18 +48,6 @@ img {
     border: 1px solid black;
     border-radius: 3px;
     padding: 3px 16px;
-}
-
-.profile-image {
-    grid-column: 1;
-    grid-row: 1 / span 3;
-}
-
-.profile-image img {
-    border: 15px solid rgb(45, 124, 98) ;
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
 }
 
 .profile-user-settings > *,
@@ -114,6 +96,7 @@ img.gallery-image {
 .gallery-item-info:hover {
     opacity: 1;
     background-color: rgb(92, 91, 91, 0.6);
+    cursor: pointer;
 }
 
 .gallery-item-info, img.gallery-image {
@@ -149,12 +132,28 @@ img.gallery-image {
 @media screen and (min-width: 769px) {
     body {
         max-width: 930px;                   /* 3x300px columns + 2x15px gaps -> respects 4x3 aspect ratio*/
+        padding: 0 3rem 3rem;
     }
 
     /* -- PROFILE HEADER -- */
     .profile {
+        display: grid;
+        column-gap: 10px;
+        margin: 35px 0;
         grid-template-columns: 250px auto;
         grid-template-rows: 80px 80px 90px;
+    }
+
+    .profile-image {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+    }
+
+    .profile-image img {
+        border: 15px solid rgb(45, 124, 98) ;
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
     }
     
     /* -- CONTENT GALLERY -- */
@@ -170,12 +169,64 @@ img.gallery-image {
 @media screen and (max-width: 768px)  {
     body {
         max-width: 600px;
+        padding: 0 10px 3rem;
+        font-size: 11px;
     }
 
     /* -- PROFILE HEADER -- */
+    /* The brief does mention "responsiveness", but does not include a mobile example. */
+    /* So here we implement a simple solution using positioning, manually placeing Profile header elements. */
+    /* Not the most elegant solution, admittedly, */
+    /* but we don't want to mess with the HTML structure too much. */
     .profile {
-        grid-template-columns: 150px auto;
-        grid-template-rows: 50px 50px 50px;
+        position: relative;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 10px 10px 0;
+        height: 180px;
+    }
+
+    .profile-image img {
+        border: 5px solid rgb(45, 124, 98) ;
+        border-radius: 100%;
+        height: 65px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .profile-image {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .profile-user-name {
+        position: absolute;
+        top: 0px;
+        left: 85px;
+    }
+
+    .profile-edit-btn {
+        position: absolute;
+        top: 43px;
+        left: 88px;
+    }
+
+    .profile-settings-btn {
+        position: absolute;
+        top: 45px;
+        left: 210px;
+    }
+
+    .profile-stats {
+        position: absolute;
+        top: 75px;
+        left: 10px;
+    }
+
+    .profile-bio {
+        position: absolute;
+        top: 120px;
+        left: 10px;
     }
 
     /* -- CONTENT GALLERY -- */
