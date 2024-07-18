@@ -20,6 +20,11 @@ img {
 
 /* -- PROFILE HEADER -- */
 
+.profile-image img {
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+}
+
 .profile button {
     cursor: pointer;
     border-radius: 3px;
@@ -69,6 +74,8 @@ img {
 /* -- CONTENT GALLERY -- */
 .gallery {
     display: grid;
+    grid-auto-rows: 400px;
+    gap: 15px;
 }
 
 img.gallery-image {
@@ -151,16 +158,12 @@ img.gallery-image {
 
     .profile-image img {
         border: 15px solid rgb(45, 124, 98) ;
-        border-radius: 100%;
         width: 100%;
-        height: 100%;
     }
     
     /* -- CONTENT GALLERY -- */
     .gallery {
         grid-template-columns: auto auto auto;
-        grid-auto-rows: 400px;
-        gap: 15px;
     }
 }
 
@@ -188,9 +191,7 @@ img.gallery-image {
 
     .profile-image img {
         border: 5px solid rgb(45, 124, 98) ;
-        border-radius: 100%;
         height: 65px;
-        aspect-ratio: 1 / 1;
     }
 
     .profile-image {
@@ -232,8 +233,6 @@ img.gallery-image {
     /* -- CONTENT GALLERY -- */
     .gallery {
         grid-template-columns: 300px;
-        grid-auto-rows: 400px;
-        gap: 15px;
         justify-content: space-around;
     }
 }
