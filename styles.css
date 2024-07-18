@@ -11,7 +11,6 @@
 
 body {
     font-family: "Open Sans", Arial, sans-serif;
-    min-height: 100vh;
     background-color: #fafafa;
     color: #262626;
     padding-bottom: 3rem;
@@ -19,6 +18,7 @@ body {
 
 img {
     display: block;
+    width: 100%;
 }
 
 .gallery {
@@ -27,6 +27,7 @@ img {
 
 .loader img {
     margin: 10px auto;
+    width: 50px;
 }
 
 /* Set 2 styles and a single breakpoint: 768px. Above for desktop, below mobile styles apply. */
@@ -35,7 +36,11 @@ img {
     body {                                  /* FOR DEV */
         background-color: aqua;             /* PURPOSES ONLY*/
     }                                       /* REMOVE FOR PROD*/
-
+    
+    .gallery {
+        max-width: 800px;
+        grid-template-columns: auto auto auto;
+    }
 }
 
 
@@ -45,4 +50,7 @@ img {
         background-color: rebeccapurple;    /* PURPOSES ONLY*/
     }                                       /* REMOVE FOR PROD*/
 
+    .gallery {
+        grid-template-columns: auto;
+    }
 }
