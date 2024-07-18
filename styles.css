@@ -1,5 +1,4 @@
 /* Base Styles */
-
 :root {
     font-size: 10px;
 }
@@ -22,6 +21,13 @@ img {
     display: block;
 }
 
+.gallery {
+    display: grid;
+}
+
+.loader img {
+    margin: 10px auto;
+}
 
 /* Set 2 styles and a single breakpoint: 768px. Above for desktop, below mobile styles apply. */
 /* Desktop Styles */
