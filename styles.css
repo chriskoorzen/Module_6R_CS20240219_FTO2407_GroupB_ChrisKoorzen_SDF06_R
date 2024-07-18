@@ -31,6 +31,50 @@ img.gallery-image {
     object-fit: cover;
 }
 
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+}
+
+.gallery-item-info:hover {
+    opacity: 1;
+    background-color: rgb(92, 91, 91, 0.6);
+}
+
+.gallery-item-info, img.gallery-image {
+    border-radius: 3px;             /* Just to _slightly_ take the edge off */
+}
+
+.gallery-item-info ul {
+    font-size: 16px;
+    color: #ffffff;
+    list-style-type: none;
+}
+
+.gallery-item-info ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.gallery-item-type {    /* NOTE: I do not see this element appear anywhere in the visual example?? */
+    display: none;
+} 
+
 .loader img {
     margin: 20px auto;
     width: 50px;
