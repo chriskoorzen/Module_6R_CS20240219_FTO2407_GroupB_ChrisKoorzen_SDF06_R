@@ -14,6 +14,7 @@ body {
     background-color: #fafafa;
     color: #262626;
     padding-bottom: 3rem;
+    margin: 0 auto;
 }
 
 img {
@@ -22,7 +23,6 @@ img {
 
 .gallery {
     display: grid;
-    margin: 0 auto;
 }
 
 img.gallery-image {
@@ -83,12 +83,11 @@ img.gallery-image {
 /* Set 2 styles and a single breakpoint: 768px. Above for desktop, below mobile styles apply. */
 /* Desktop Styles */
 @media screen and (min-width: 769px) {
-    body {                                  /* FOR DEV */
-        background-color: aqua;             /* PURPOSES ONLY*/
-    }                                       /* REMOVE FOR PROD*/
+    body {
+        max-width: 930px;                   /* 3x300px columns + 2x15px gaps -> respects 4x3 aspect ratio*/
+    }
     
     .gallery {
-        max-width: 800px;
         grid-template-columns: auto auto auto;
         grid-auto-rows: 400px;
         gap: 15px;
@@ -98,12 +97,11 @@ img.gallery-image {
 
 /* Mobile and Tablet Styles */
 @media screen and (max-width: 768px)  {
-    body {                                  /* FOR DEV */
-        background-color: rebeccapurple;    /* PURPOSES ONLY*/
-    }                                       /* REMOVE FOR PROD*/
+    body {
+        max-width: 600px;
+    }
 
     .gallery {
-        max-width: 600px;
         grid-template-columns: 300px;
         grid-auto-rows: 400px;
         gap: 15px;
