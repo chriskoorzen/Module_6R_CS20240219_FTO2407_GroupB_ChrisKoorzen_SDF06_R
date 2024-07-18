@@ -19,7 +19,6 @@ img {
 
 
 /* -- PROFILE HEADER -- */
-
 .profile-image img {
     border-radius: 100%;
     aspect-ratio: 1 / 1;
@@ -31,7 +30,7 @@ img {
 }
 
 .profile button:active {
-    box-shadow: 0 0 8px gray;       /* Just so that the user can see something happens when they click */
+    box-shadow: 0 0 8px gray;       /* Just so that the user can see something happens when they click. */
 }
 
 .profile-settings-btn {
@@ -134,11 +133,16 @@ img.gallery-image {
     width: 50px;
 }
 
-/* Set 2 styles and a single breakpoint: 768px. Above for desktop, below mobile styles apply. */
+
+/*  
+  Set 2 Media Query styles with a single breakpoint: 768px. 
+  Above 768px for desktop; below that mobile and tablet styles apply. 
+*/
+
 /* Desktop Styles */
 @media screen and (min-width: 769px) {
     body {
-        max-width: 930px;                   /* 3x300px columns + 2x15px gaps -> respects 4x3 aspect ratio*/
+        max-width: 930px;                   /* 3x300px columns + 2x15px gaps -> respects 4x3 aspect ratio, mostly. */
         padding: 0 3rem 3rem;
     }
 
